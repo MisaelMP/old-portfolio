@@ -1,8 +1,8 @@
-// $(document).ready(() => {
+$(document).ready(() => {
 
 
 
-// });
+});
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -17,19 +17,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	/// custom cursor ///
 
-	// const cursorRounded = document.querySelector('.rounded');
-	// const cursorPointed = document.querySelector('.pointed');
+	const cursorRounded = document.querySelector('.rounded');
+	const cursorPointed = document.querySelector('.pointed');
 
-	// const moveCursor = (e) => {
-	// 	const mouseY = e.pageY;
-	// 	const mouseX = e.pageX;
+	const moveCursor = (e) => {
+		const mouseY = e.pageY;
+		const mouseX = e.pageX;
 
-	// 	cursorRounded.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+		cursorRounded.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
 
-	// 	cursorPointed.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
-	// };
+		cursorPointed.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+	};
 
-	// window.addEventListener('mousemove', moveCursor);
+	window.addEventListener('mousemove', moveCursor);
 
 	// Sticky Header
 	$(window).scroll(function () {
