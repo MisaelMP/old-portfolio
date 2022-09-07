@@ -18,7 +18,7 @@
 
 #skillset {
   @extend .basic-section;
-  color: $Eigengrau;
+  color: $eigenfrau;
   flex-flow: row wrap;
   justify-content: center;
 }
@@ -32,7 +32,7 @@
 
 #contact {
   @extend .basic-section;
-  color: $Eigengrau;
+  color: $eigenfrau;
   flex-direction: column;
   justify-content: center;
   align-content: center;
@@ -132,12 +132,12 @@ button {
 }
 
 button.btn {
-	color: $Eigengrau;
-	box-shadow: $Eigengrau 0 0px 0px 2px inset;
+	color: $eigenfrau;
+	box-shadow: $eigenfrau 0 0px 0px 2px inset;
   font-family: 'Roboto', sans-serif;
 }
 
 button.btn:hover {
 	color: rgba(255, 255, 255, 0.85);
-	box-shadow: $Eigengrau 0 0px 0px 40px inset;
+	box-shadow: $eigenfrau 0 0px 0px 40px inset;
 }

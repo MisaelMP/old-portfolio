@@ -8,31 +8,11 @@
         </p>
       </div>
       <div class="gallery">
-
-        <div class="gallery-item">
-          <a href="https://drawing-sound.herokuapp.com/" target="_blank"><img class="gallery-image" src="assets/images/drawingandSound.png" alt="landing page for website using animation with brownian motion on title"></a>
-		    </div>
-
-        <div class="gallery-item">
-        <a href="https://inkspace.herokuapp.com/" target="_blank"><img class="gallery-image" src="assets/images/inkspace.png" alt="landing page animation working with mouse"></a>
-        </div>
-
-        <div class="gallery-item">
-        <a href="https://rocky-gorge-25750.herokuapp.com/" target="_blank"><img class="gallery-image" src="assets/images/pickitupmate.png" alt="landing page with information about the site and app"></a>
-		    </div>
-
-        <div class="gallery-item">
-        <a href="https://misaelmp.github.io/react_weather_app/" target="_blank"><img class="gallery-image" src="assets/images/weatherapp.png" alt="landing page with weather animations and search form"></a>
-		   </div>
-
-        <div class="gallery-item">
-        <a href="https://misaelmp.github.io/Earth_Moon_System/" target="_blank"><img class="gallery-image" src="assets/images/earthmoonsystem.png" alt="3d image of Earth-Moon system"></a>
-		    </div>
-
-        <div class="gallery-item">
-        <a href="http://second-cover.surge.sh/" target="_blank"><img class="gallery-image" src="assets/images/portfolio2.png" alt="Landing page portfolio"></a>
-		   </div>
-
+        {% for project in site.data.projects %}
+          <div class="gallery-item">
+            <a href="{{ project.href }}" target="_blank"><img class="gallery-image" src="{{ project.src }}" alt="landing page for website using animation with brownian motion on title"></a>
+          </div>
+        {% endfor %}
       </div>
 
     </section>

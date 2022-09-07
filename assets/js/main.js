@@ -1,10 +1,35 @@
-$(document).ready(() => {
-	$(window).scroll(function () {
-		var scroll = $(window).scrollTop();
+// $(document).ready(() => {
+
+
+
+// });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+	/// Diaginaol svg effect ///
+
+	window.onscroll = () => {
+		const scroll = $(window).scrollTop();
 		$('.diagonal-bg svg line').attr('stroke-width', 30 + scroll / 10 + '%');
 		//30 is the starting width
 		//alter the amount of growth by changing scroll/x
-	});
+	};
+
+	/// custom cursor ///
+
+	// const cursorRounded = document.querySelector('.rounded');
+	// const cursorPointed = document.querySelector('.pointed');
+
+	// const moveCursor = (e) => {
+	// 	const mouseY = e.pageY;
+	// 	const mouseX = e.pageX;
+
+	// 	cursorRounded.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+
+	// 	cursorPointed.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+	// };
+
+	// window.addEventListener('mousemove', moveCursor);
 
 	// Sticky Header
 	$(window).scroll(function () {
@@ -44,20 +69,6 @@ $(document).ready(() => {
 		);
 		event.preventDefault();
 	});
-
-  /// custom cursor ///
-
-  const cursorRounded = document.querySelector('.rounded');
-	const cursorPointed = document.querySelector('.pointed');
-
-	const moveCursor = (e) => {
-		const mouseY = e.clientY;
-		const mouseX = e.clientX;
-
-		cursorRounded.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
-
-		cursorPointed.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
-	};
-
-	window.addEventListener('mousemove', moveCursor);
 });
+
+ 

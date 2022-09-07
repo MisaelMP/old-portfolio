@@ -12,7 +12,7 @@
 
 body {
 	background: #c5c0b7;
-	color: $Eigengrau;
+	color: $eigenfrau;
   // cursor: none;
 	height: 100%;
 	font-family: 'Roboto', sans-serif;
@@ -58,7 +58,8 @@ main {
 	}
 	hr {
 		height: 3px;
-		color: rgba(#403e41, 0.83);
+		background-color: rgba($eigenfrau, 0.83);
+    border: none;
 		margin-bottom: 2em;
 	}
 }
