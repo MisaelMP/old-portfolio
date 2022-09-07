@@ -1,0 +1,77 @@
+@import '0-base/0-base_dir';
+
+.diagonal-bg {
+	position: fixed;
+	top: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+}
+
+// Styles
+
+body {
+	background: #c5c0b7;
+	color: $Eigengrau;
+	height: 100%;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+	-webkit-font-smoothing: antialiased;
+	margin: 0;
+}
+h1,
+h2,
+h3,
+h4 {
+	font-family: 'Playfair Display', serif;
+}
+h1 {
+	font-size: 5vw;
+	line-height: 1.25;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 2vw;
+}
+p {
+	margin: 2em;
+}
+main {
+	width: 70%;
+  margin: 5em auto;
+  padding-bottom: 2.5rem;
+  
+	@media (min-width: 400px) {
+		width: 65%;
+	}
+	@media (min-width: 600px) {
+    width: 50%;
+    padding-bottom: 5rem;
+	}
+	h1,
+	h2,
+	h3 {
+		text-align: center;
+	}
+	hr {
+		height: 3px;
+		color: rgba(#403e41, 0.83);
+		margin-bottom: 2em;
+	}
+}
+
+@media (max-width: 500px) {
+	h1 {
+		font-size: 8vw;
+	}
+
+	h2,
+	h3 {
+		font-size: 4vw;
+	}
+	   p {
+		font-size: 3vw;
+	}
+}
