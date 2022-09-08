@@ -1,22 +1,21 @@
-$(document).ready(() => {
-
-
-
-});
-
-
 document.addEventListener('DOMContentLoaded', () => {
 	/// Diaginaol svg effect ///
 
 	window.onscroll = () => {
 		const scroll = $(window).scrollTop();
-		$('.diagonal-bg svg line').attr('stroke-width', 30 + scroll / 10 + '%');
 		//30 is the starting width
 		//alter the amount of growth by changing scroll/x
+		$('.diagonal-bg svg line').attr('stroke-width', 30 + scroll / 10 + '%');
+
+    // Sticky header //
+    if ($(window).scrollTop() > 100) {
+			$('.main_h').addClass('sticky');
+		} else {
+			$('.main_h').removeClass('sticky');
+		}
 	};
 
 	/// custom cursor ///
-
 	const cursorLarge = document.querySelector('.cursor-circle--large');
 	const cursorSmall = document.querySelector('.cursor-circle--small');
 
@@ -30,15 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	};
 
 	window.addEventListener('mousemove', moveCursor);
-
-	// Sticky Header
-	$(window).scroll(function () {
-		if ($(window).scrollTop() > 100) {
-			$('.main_h').addClass('sticky');
-		} else {
-			$('.main_h').removeClass('sticky');
-		}
-	});
 
 	// Mobile Navigation
 	$('.mobile-toggle').click(function () {
@@ -58,9 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// navigation scroll
 	$('nav a').click(function (event) {
-		var id = $(this).attr('href');
-		var offset = 70;
-		var target = $(id).offset().top - offset;
+		let id = $(this).attr('href');
+		let offset = 70;
+		let target = $(id).offset().top - offset;
 		$('html, body').animate(
 			{
 				scrollTop: target,
