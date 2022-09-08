@@ -1,0 +1,7 @@
+.skillset {
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, 8rem);
+  grid-gap: 1rem;
+  justify-content: center;
+  width: 100%;
+}

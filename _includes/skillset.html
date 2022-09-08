@@ -1,13 +1,15 @@
-  <section id="skillset">
+  <section class="section section--skillset" id="skillset">
       <div>
         <h2>Skillset</h2>
         <p>
           I have been working with different languages, frameworks and libraries as part of the General Assembly Full-time Web Developer course, but also independently as a proper psychonaut and autodidact. I find myself enjoying the plethora of possibilities and the variations of programming, joyful and always eager to learn new technologies. There is a pleasant aesthetic beauty sometimes overlooked in programming, but now I am here to denounce it.
 
       </div>
-      {% for skill in site.data.skillset %}
-      <div>
-        <i class="devicon-{{skill.icon}}-plain icon"></i>
+      <div class="skillset">
+        {% for skill in site.data.skillset %}
+          <div class="skillset__item">
+            <i class="devicon-{{skill.icon}}-plain icon"></i>
+          </div>
+        {% endfor %}
       </div>
-      {% endfor %}
     </section>
