@@ -7,10 +7,10 @@
 
         </p>
       </div>
-      <div class="gallery">
+      <div class="project">
         {% for project in site.data.projects %}
-          <div class="gallery-item">
-            <a href="{{ project.href }}" target="_blank"><img class="gallery-image" src="{{ project.src }}" alt="landing page for website using animation with brownian motion on title"></a>
+          <div class="project__item">
+            <a href="{{ project.href }}" target="_blank"><img class="project__image" src="{{ project.src }}" alt="landing page for website using animation with brownian motion on title"></a>
           </div>
         {% endfor %}
       </div>

@@ -1,0 +1,46 @@
+.project {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+	gap: 2rem;
+	padding-bottom: 2rem;
+
+	&__item {
+		margin: 1rem;
+    border-radius: rem(8);
+		box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+		overflow: hidden;
+	}
+
+	&__image {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+		transition: transform 400ms ease-out;
+
+		&:hover {
+			transform: scale(1.15);
+		}
+	}
+
+	@media (max-width: 500px) {
+		display: grid;
+		grid-template-rows: auto;
+		grid-gap: 1rem;
+
+		&__item {
+			margin: 1rem;
+			box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+			overflow: hidden;
+		}
+
+		&__image {
+			height: 10vh;
+			object-fit: cover;
+			transition: transform 400ms ease-out;
+
+			&:hover {
+				transform: scale(1.15);
+			}
+		}
+	}
+}

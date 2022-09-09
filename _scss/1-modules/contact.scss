@@ -1,0 +1,17 @@
+.contact {
+	&__link {
+		color: white;
+
+		&.is-hidden {
+			opacity: 0;
+			display: flex;
+			justify-content: center;
+			transition: all 0.2s ease;
+		}
+	}
+
+	&:hover .is-hidden {
+		color: $eigenfrau;
+    opacity: 1;
+	}
+}
