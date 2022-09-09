@@ -2,7 +2,7 @@
 	&__link {
 		color: white;
 
-		&.is-hidden {
+		& > .is-hidden {
 			opacity: 0;
 			display: flex;
 			justify-content: center;
