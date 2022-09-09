@@ -2,6 +2,8 @@ $cusor-size--large: 30px;
 $cusor-size--small: 15px;
 
 .cursor-circle {
+  z-index: 9999;
+
   &--large {
     border: rem(2) solid $eigenfrau;
     border-radius: 50%;
@@ -12,10 +14,11 @@ $cusor-size--small: 15px;
   }
 
   &--small {
-    width: $cusor-size--small;
-    height: $cusor-size--small;
     background-color: $eigenfrau;
     border-radius: 50%;
+    height: $cusor-size--small;
     margin-bottom: 20rem;
+    position: relative;
+    width: $cusor-size--small;
   }
 }
