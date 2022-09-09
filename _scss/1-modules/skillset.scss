@@ -4,4 +4,13 @@
   grid-gap: 2rem;
   justify-content: center;
   width: 100%;
+
+  &__item {
+    border: 1px solid $eigenfrau;
+    border-radius: 100%;
+    display: flex;
+    height: rem(120);
+    justify-content: center;
+    width: rem(120);
+  }
 }

@@ -1,3 +1,8 @@
+// Needs to be before everything to have global cascading access //
+// SASS helpers
+@import "./0.1-functions/0.1-functions_dir.scss";
+
+// Base styles //
 @import 'colors';
 @import 'fonts';
 @import 'reset';

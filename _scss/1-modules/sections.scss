@@ -1,9 +1,10 @@
 @import '0-base/0-base_dir';
 
 %section-basic {
+  align-content: center;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
+  padding-bottom: rem(48);
 }
 
 .section {
