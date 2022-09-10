@@ -1,140 +1,64 @@
-@import '0-base/0-base_dir';
-
-$header-height--mobile: 71;
-$nav-height--mobile: 25;
-$nav-height-margin--mobile: rem($header-height--mobile) - rem($nav-height--mobile);
-
-.header {
-	position: fixed;
-	top: 0;
-	max-height: rem(70);
-	z-index: 999;
-	width: 100%;
-	background: none;
-	overflow: hidden;
-	-webkit-transition: all 0.3s;
-	transition: all 0.3s;
-	opacity: 0;
-	top: rem(-100);
-	font-family: 'Montserrat', sans-serif;
-}
-
-.is-open {
-	max-height: rem(400) !important;
-}
-.is-open .navbar__toggle--mobile {
-	transform: rotate(-90deg);
-	-webkit-transform: rotate(-90deg);
-}
-
-.is-sticky {
-	background-color: rgba(255, 255, 255, 0.93);
-	opacity: 1;
-	top: 0px;
-	border-bottom: 1px solid gainsboro;
-}
-
-.header__logo {
-	width: rem(50);
-	font-size: rem(25);
-	color: #8f8f8f;
-	text-transform: uppercase;
-	float: left;
-	display: block;
-	margin-top: 0;
-	line-height: 1;
-}
-@media only screen and (max-width: 766px) {
-	.header__logo {
-		float: none;
-	}
-}
-
 .navbar {
-	float: right;
 	width: 100%;
-}
 
-.navbar__list {
-	list-style: none;
-	overflow: hidden;
-	text-align: right;
-	float: right;
-}
-@media only screen and (max-width: 766px) {
-	.navbar__list {
+	&__item {
+		display: inline-block;
+		line-height: 1.5;
+		margin: 0;
+		padding: 1em 0;
+		width: 100%;
+	}
+
+	&__item-link {
+		color: #888888;
+		text-transform: uppercase;
+		font-size: rem(12);
+	}
+
+	&__list {
 		padding-top: rem(10);
 		margin-bottom: rem(22);
-		float: left;
+		list-style: none;
 		text-align: center;
 		width: 100%;
 	}
-}
-.navbar__item {
-	display: inline-block;
-	margin-left: rem(35);
-	line-height: 1.5;
-}
-@media only screen and (max-width: 766px) {
-	.navbar__item {
-		width: 100%;
-		padding: 1em 0;
-		margin: 0;
-	}
-}
 
-.navbar__toggle--mobile {
-	display: block;
-	font-size: rem(20);
-	position: absolute;
-	right: rem(22);
-	top: 0;
-	width: rem(30);
-	-webkit-transition: all 200ms ease-in;
-	-moz-transition: all 200ms ease-in;
-	transition: all 200ms ease-in;
-}
+	&__toggle--mobile {
+		display: block;
+		font-size: rem(20);
+		position: absolute;
+		right: rem(22);
+		top: 0;
+		width: rem(30);
+		-webkit-transition: all 200ms ease-in;
+		-moz-transition: all 200ms ease-in;
+		transition: all 200ms ease-in;
 
-.navbar__toggle--mobile span {
-	width: rem(30);
-	height: rem(4);
-	margin-bottom: rem(6);
-	border-radius: rem(1000);
-	background: #8f8f8f;
-	display: block;
-}
-
-.header__block {
-	display: block;
-	margin: ($nav-height-margin--mobile / 2) auto;
-	max-width: rem(940);
-	position: relative;
-	padding: 0 rem(24);
-}
-
-.navbar__item-link {
-	color: #888888;
-	text-transform: uppercase;
-	font-size: rem(12);
-}
-
-@media only screen and (min-width: 766px) {
-	.header {
-		padding: rem(17) 0;
+		& span {
+			width: rem(30);
+			height: rem(4);
+			margin-bottom: rem(6);
+			border-radius: rem(1000);
+			background: #8f8f8f;
+			display: block;
+		}
 	}
 
-	.header__block {
-		margin: 0 auto;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-
-	.navbar {
+	@media only screen and (min-width: 768px) {
 		width: 60%;
-	}
 
-	.navbar__toggle--mobile {
-		display: none;
+		&__item {
+			margin-left: rem(35);
+		}
+
+		&__list {
+      display: flex;
+      width: auto;
+			text-align: right;
+		}
+
+		&__toggle--mobile {
+			display: none;
+		}
 	}
 }
