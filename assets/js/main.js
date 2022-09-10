@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const mobileToggle = document.querySelector('[data-toggle-mobile]');
   const svgLine = document.querySelector('[data-svg-line');
 
-	/// Diaginaol svg effect ///
+	/// Diagonal svg effect ///
 
 	window.onscroll = () => {
 		const scroll = window.scrollY;
@@ -48,21 +48,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   for (let link of navigationLink) {
     link.addEventListener('click', (e) => {
-      const SECTION_TOP = 70;
+      e.preventDefault();
+
       let sectionId = e.target.getAttribute('href');
-      let offset = SECTION_TOP;
-      let target = $(sectionId).offset().top - offset;
+      let headerHeight = 105;;
+      let scrollTarget = document.querySelector(sectionId);
 
       if (header.classList.contains('is-open')) {
         header.classList.remove('is-open');
       }
-      $('html, body').animate(
-        {
-          scrollTop: target,
-        },
-        500
-      );
-      e.preventDefault();
+      window,scrollTo(0, scrollTarget.offsetTop - headerHeight);
     });
   }
 });
