@@ -21,4 +21,8 @@ $cusor-size--small: rem(15);
     position: relative;
     width: $cusor-size--small;
   }
+
+  @media (hover: none) {
+    display: none;
+  }
 }

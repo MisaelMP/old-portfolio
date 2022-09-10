@@ -1,7 +1,7 @@
 .skillset {
   display: grid; 
-  grid-template-columns: repeat(auto-fill, 8rem);
-  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, 4rem);
+  gap: 1rem;
   justify-content: center;
   width: 100%;
 
@@ -10,20 +10,28 @@
     border: 1px solid $eigenfrau;
     border-radius: 100%;
     display: flex;
-    height: rem(120);
+    height: rem(60);
     justify-content: center;
-    width: rem(120);
+    width: rem(60);
   }
 
   &__icon {
-     font-size: 2em;
-     margin: 0.5em;
+     font-size: 2rem;
+     margin: 0.5rem;
   }
 
   @media (min-width: 500px) {
+    grid-template-columns: repeat(auto-fill, 8rem);
+    gap: 2rem;
+
     &__icon {
       font-size: 4em;
        margin: 0.5em;
+    }
+
+    &__item {
+       height: rem(120);
+       width: rem(120);
     }
   }
 }
