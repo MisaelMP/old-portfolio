@@ -3,16 +3,17 @@ document.addEventListener('DOMContentLoaded', () => {
 	// variables //
   const cursorCustom = document.querySelectorAll('[data-cursor-custom]');
 	const header = document.querySelector('[data-header]');
-	const navigationLink = document.querySelector('[data-nav-link]');
+	const navigationLink = document.querySelectorAll('[data-nav-link]');
 	const mobileToggle = document.querySelector('[data-toggle-mobile]');
+  const svgLine = document.querySelector('[data-svg-line');
 
-	/// Diaginaol svg effect ///
+	/// Diagonal svg effect ///
 
 	window.onscroll = () => {
 		const scroll = window.scrollY;
 		//30 is the starting width
 		//alter the amount of growth by changing scroll/x
-		$('.diagonal-bg svg line').attr('stroke-width', 30 + scroll / 10 + '%');
+		svgLine.setAttribute('stroke-width', 30 + scroll / 10 + '%');
 
 		// Sticky header //
 		if (scroll > 100) {
@@ -45,23 +46,18 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	});
 
-	navigationLink.addEventListener('click', (e) => {
-    const SECTION_TOP = 70;
+  for (let link of navigationLink) {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
 
-		let id = $(this).attr('href');
-		let offset = SECTION_TOP;
-		let target = $(id).offset().top - offset;
+      let sectionId = e.target.getAttribute('href');
+      let headerHeight = 105;;
+      let scrollTarget = document.querySelector(sectionId);
 
-		if (header.classList.contains('is-open')) {
-			// $('.navigation').removeClass('is-open');
-			header.classList.remove('is-open');
-		}
-		$('html, body').animate(
-			{
-				scrollTop: target,
-			},
-			500
-		);
-		e.preventDefault();
-	});
+      if (header.classList.contains('is-open')) {
+        header.classList.remove('is-open');
+      }
+      window,scrollTo(0, scrollTarget.offsetTop - headerHeight);
+    });
+  }
 });

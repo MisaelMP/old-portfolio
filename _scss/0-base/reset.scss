@@ -5,3 +5,8 @@ a:visited {
 		color: $eigenfrau;
 	}
 }
+
+html {
+  /* THIS IS SMOOTH */
+  scroll-behavior: smooth;
+}
