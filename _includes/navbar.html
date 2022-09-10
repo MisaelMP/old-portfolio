@@ -1,15 +1,15 @@
-<header class="main_h" data-header>
-	<div class="row">
-		<a class="logo" href="#">M/M</a>
+<header class="header" data-header>
+	<div class="header__block">
+		<a class="header__logo" href="#">M/M</a>
 
-		<div class="mobile-toggle" data-mobile-toggle>
+		<div class="navbar__toggle--mobile" data-toggle-mobile>
 			<span></span>
 			<span></span>
 			<span></span>
 		</div>
 
-		<nav>
-			<ul>
+		<nav class="navbar">
+			<ul class="navbar__list">
         {% for item in site.data.navbarItems %}
           <li class="navbar__item">
             <a 

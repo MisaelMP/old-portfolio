@@ -1,9 +1,10 @@
+
 document.addEventListener('DOMContentLoaded', () => {
 	// variables //
   const cursorCustom = document.querySelectorAll('[data-cursor-custom]');
 	const header = document.querySelector('[data-header]');
 	const navigationLink = document.querySelector('[data-nav-link]');
-	const mobileToggle = document.querySelector('[data-mobile-toggle]');
+	const mobileToggle = document.querySelector('[data-toggle-mobile]');
 
 	/// Diaginaol svg effect ///
 
@@ -45,8 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	navigationLink.addEventListener('click', (e) => {
+    const SECTION_TOP = 70;
+
 		let id = $(this).attr('href');
-		let offset = 70;
+		let offset = SECTION_TOP;
 		let target = $(id).offset().top - offset;
 
 		if (header.classList.contains('is-open')) {
