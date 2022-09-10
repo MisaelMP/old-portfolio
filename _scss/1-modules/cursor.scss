@@ -1,5 +1,5 @@
-$cusor-size--large: 30px;
-$cusor-size--small: 15px;
+$cusor-size--large: rem(30);
+$cusor-size--small: rem(15);
 
 .cursor-circle {
   z-index: 9999;

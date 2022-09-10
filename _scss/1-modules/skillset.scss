@@ -16,14 +16,14 @@
   }
 
   &__icon {
-    font-size: 4em;
-    margin: 0.5em;
+     font-size: 2em;
+     margin: 0.5em;
   }
 
-  @media (max-width: 500px) {
+  @media (min-width: 500px) {
     &__icon {
-      font-size: 2em;
-      margin: 0.5em;
+      font-size: 4em;
+       margin: 0.5em;
     }
   }
 }
