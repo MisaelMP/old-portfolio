@@ -1,64 +1,64 @@
 .navbar {
-	width: 100%;
+  width: 100%;
 
-	&__item {
-		display: inline-block;
-		line-height: 1.5;
-		margin: 0;
-		padding: 1em 0;
-		width: 100%;
-	}
+  &__item {
+    display: inline-block;
+    line-height: 1.5;
+    margin: 0;
+    padding: 1em 0;
+    width: 100%;
+  }
 
-	&__item-link {
-		color: #888888;
-		text-transform: uppercase;
-		font-size: rem(12);
-	}
+  &__item-link {
+    color: #888888;
+    text-transform: uppercase;
+    font-size: rem(12);
+  }
 
-	&__list {
-		padding-top: rem(10);
-		margin-bottom: rem(22);
-		list-style: none;
-		text-align: center;
-		width: 100%;
-	}
+  &__list {
+    padding-top: rem(10);
+    margin-bottom: rem(22);
+    list-style: none;
+    text-align: center;
+    width: 100%;
+  }
 
-	&__toggle--mobile {
-		display: block;
-		font-size: rem(20);
-		position: absolute;
-		right: rem(22);
-		top: 0;
-		width: rem(30);
-		-webkit-transition: all 200ms ease-in;
-		-moz-transition: all 200ms ease-in;
-		transition: all 200ms ease-in;
+  &__toggle--mobile {
+    display: block;
+    font-size: rem(20);
+    position: absolute;
+    right: rem(22);
+    top: 0;
+    width: rem(30);
+    -webkit-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    transition: all 200ms ease-in;
 
-		& span {
-			width: rem(30);
-			height: rem(4);
-			margin-bottom: rem(6);
-			border-radius: rem(1000);
-			background: #8f8f8f;
-			display: block;
-		}
-	}
+    & span {
+      width: rem(30);
+      height: rem(4);
+      margin-bottom: rem(6);
+      border-radius: rem(1000);
+      background: #8f8f8f;
+      display: block;
+    }
+  }
 
-	@media only screen and (min-width: 768px) {
-		width: 60%;
+  @media only screen and (min-width: 768px) {
+    width: 60%;
 
-		&__item {
-			margin-left: rem(35);
-		}
+    &__item {
+      margin-left: rem(35);
+    }
 
-		&__list {
+    &__list {
       display: flex;
       width: auto;
-			text-align: right;
-		}
+      text-align: right;
+    }
 
-		&__toggle--mobile {
-			display: none;
-		}
-	}
+    &__toggle--mobile {
+      display: none;
+    }
+  }
 }
