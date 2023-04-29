@@ -3,7 +3,7 @@ let joints;
 
 function setup() {
 	let canvas = createCanvas(windowWidth, windowHeight);
-  canvas.position(0, 0);
+	canvas.position(0, 0);
   
 	colorMode(HSB, 360, 100, 100, 100);
 

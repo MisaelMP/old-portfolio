@@ -1,2 +1,18 @@
 {
+    "emmet.showSuggestionsAsSnippets": true,
+    "emmet.syntaxProfiles": {
+    
+    },
+    "emmet.includeLanguages": {
+        "*.vue": "html",
+        "*.jsx": "html",
+        "*.nunjucks": "html"
+    },
+    "files.associations": {
+        "*.njk": "nunjucks"
+    },
+    "prettier.jsxSingleQuote": true,
+    "prettier.singleQuote": true,
+    "prettier.vueIndentScriptAndStyle": true,
+    "nuxt.isNuxtApp": false
 }
